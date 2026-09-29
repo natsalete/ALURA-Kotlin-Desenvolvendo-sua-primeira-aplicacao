@@ -1,6 +1,6 @@
 package com.fundamentos
 
-class InfoJogo(val info: Jogo) {
+class InfoJogo(val info: InfoApiShark) {
 
     override fun toString(): String {
         return info.toString()

@@ -14,4 +14,6 @@ fun main(){
         it.usuario = "natsalete"
         it.idInterno = "natsalete14"
     }
+
+    println(gamer1)
 }

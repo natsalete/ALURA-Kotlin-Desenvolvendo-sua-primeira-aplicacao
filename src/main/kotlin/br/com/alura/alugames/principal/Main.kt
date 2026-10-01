@@ -3,6 +3,7 @@ package com.fundamentos.br.com.alura.alugames.principal
 import com.fundamentos.br.com.alura.alugames.modelo.Gamer
 import com.fundamentos.br.com.alura.alugames.modelo.Jogo
 import com.fundamentos.br.com.alura.alugames.servicos.ConsumoApi
+import com.fundamentos.br.com.alura.alugames.utilitario.tranformarEmIdade
 import java.util.Scanner
 
 fun main() {
@@ -10,6 +11,7 @@ fun main() {
     val gamer = Gamer.criarGamer(leitura)
     println("Cadastro concluído com sucesso. Dados do gamer:")
     println(gamer)
+    println("Idade do gamer: " + gamer.dataNascimento?.tranformarEmIdade())
 
     do {
         println("Digite um código de jogo para buscar:")

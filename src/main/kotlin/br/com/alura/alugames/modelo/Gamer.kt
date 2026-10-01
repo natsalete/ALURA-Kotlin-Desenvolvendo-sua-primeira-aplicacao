@@ -5,7 +5,15 @@ import kotlin.random.Random
 data class Gamer(var nome: String, var email: String){
     var dataNascimento: String? = null
     var usuario: String? = null
+        set(value)  {
+            field = value
+            if (idInterno.isNullOrBlank()){
+                criarIdInterno()
+            }
+        }
+
     var idInterno: String? = null
+        private set
 
     constructor(nome: String, email: String, dataNascimento: String, usuario: String) : this(nome, email) {
         this.dataNascimento = dataNascimento
@@ -13,7 +21,7 @@ data class Gamer(var nome: String, var email: String){
         criarIdInterno()
     }
 
-        override fun toString(): String {
+    override fun toString(): String {
         return "Gamer(nome='$nome', email='$email', dataNascimento=$dataNascimento, usuario=$usuario, idInterno=$idInterno)"
     }
 

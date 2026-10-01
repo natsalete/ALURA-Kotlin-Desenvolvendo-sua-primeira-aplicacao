@@ -1,3 +1,6 @@
+<details>
+<summary>🇧🇷 Versão em Português</summary>
+  
 <h1 align="center">🎮 AluGames</h1>
 
 <p align="center">
@@ -120,9 +123,142 @@ Deseja inserir uma descrição personalizada? S/N
   </a>
 </p>
 
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
 ---
 
 <p align="center">
   Feito por <a href="https://github.com/natsalete">Natalia Salete</a>
 </p>
 
+</details>
+
+<h1 align="center">🎮 AluGames</h1>
+
+<p align="center">
+A console application built in Kotlin to register gamers and search for games using the public CheapShark API.
+</p>
+
+<p align="center">
+<img src="https://img.shields.io/badge/Kotlin-2.3-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin">
+<img src="https://img.shields.io/badge/Maven-build-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" alt="Maven">
+<img src="https://img.shields.io/badge/IntelliJ_IDEA-IDE-000000?style=for-the-badge&logo=intellijidea&logoColor=white" alt="IntelliJ IDEA">
+<img src="https://img.shields.io/badge/Alura-course-051933?style=for-the-badge" alt="Alura">
+</p>
+
+<p align="center">
+<a href="#-about">About</a> •
+<a href="#-what-i-learned">What I learned</a> •
+<a href="#-features">Features</a> •
+<a href="#-structure">Structure</a> •
+<a href="#-how-to-run">How to run</a> •
+<a href="#-certificate">Certificate</a>
+</p>
+
+---
+
+## 📖 About
+
+A project developed during the **[Kotlin: Developing Your First Application](https://www.alura.com.br/)** course by Alura.
+
+AluGames registers a gamer via the terminal and searches for games by ID using the [CheapShark API](https://apidocs.cheapshark.com/). The gamer builds a list of searched games—adding custom descriptions—and can then sort, filter, and remove items from that list. ## 🧠 What I learned
+
+- [x] Create a Kotlin project using **IntelliJ IDEA** and **Maven**
+- [x] Consume an **external API** with `HttpClient` and convert JSON using **Gson**
+- [x] Use key **data types** and language features: `data class`, secondary constructor, `companion object`, null safety, extension functions, and scope functions (`let`, `also`)
+- [x] Read user input using **`Scanner`**
+- [x] Control flow using **conditionals**, **loops** (`do-while`, `forEach`), and **exceptions** (`runCatching`, `IllegalArgumentException`)
+
+## ✨ Features
+
+| Feature | Description |
+|---|---|
+| 👤 Gamer registration | Name and email required; date of birth and username optional |
+| 🏷️ Internal ID | Generated in `username#0000` format when the username is set |
+| 🎂 Age calculation | `String.tranformarEmIdade()` extension converts `DD/MM/YYYY` to age |
+| 🔎 Game search | Queries CheapShark using the game code |
+| 📝 Custom description | Gamer can write their own game description |
+| 🗂️ Game list | Sorting by title, filtering by name, and removal by position |
+| ⚠️ Error handling | Non-existent code displays a message and the loop continues | ## 🗃️ Structure
+
+```
+src/main/kotlin/br/com/alura/alugames
+├── modelo
+│   ├── Gamer.kt            # Gamer data, internal ID, and email validation
+│   ├── Jogo.kt             # Game title, cover image, and description
+│   ├── InfoJogo.kt         # API response
+│   └── InfoApiShark.kt     # API fields: title and thumb
+├── principal
+│   ├── Main.kt             # Main application flow
+│   └── TesteGamer.kt       # Manual tests for the Gamer class
+├── servicos
+│   └── ConsumoApi.kt       # HTTP call to CheapShark
+└── utilitario
+└── StringExtension.kt  # Extension to calculate age
+```
+
+## 🚀 How to run
+
+**Prerequisites:** JDK 11 or higher and Maven.
+
+### Using IntelliJ IDEA
+
+1. Clone the repository:
+```bash
+git clone https://github.com/natsalete/ALURA-Kotlin-Desenvolvendo-sua-primeira-aplicacao.git
+```
+2. Open the folder in IntelliJ IDEA.
+3. Open `src/main/kotlin/br/com/alura/alugames/principal/Main.kt`.
+4. Click **Run** next to the `main` function.
+
+### Using the terminal
+
+```bash
+mvn compile exec:java -Dexec.mainClass="com.fundamentos.br.com.alura.alugames.principal.MainKt"
+```
+
+### Usage example
+
+```
+Welcome to AluGames! Let's set up your account. Enter your name:
+Natalia
+Enter your email:
+natalia@email.com
+Do you want to complete your registration with a username and date of birth? (Y/N)
+N
+Registration completed successfully.
+``` Gamer data:
+...
+Enter a game code to search:
+146
+Do you want to enter a custom description? Y/N
+```
+
+> 💡 Game codes to test: `146` (Batman: Arkham Asylum GOTY) and `612` (LEGO Batman). To see error handling, use `1337`, which does not exist. Find other codes at `https://www.cheapshark.com/api/1.0/games?title=batman`.
+
+## 🛠️ Technologies
+
+- [Kotlin](https://kotlinlang.org/)
+- [Maven](https://maven.apache.org/)
+- [Gson](https://github.com/google/gson)
+- [CheapShark API](https://apidocs.cheapshark.com/)
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+
+## 🏆 Certificate
+
+<p align="center">
+<a href="https://drive.google.com/file/d/12vQOSl2BA1KMigY1fgNcHBEDxlIU3yhq/view?usp=sharing">
+<img src="https://img.shields.io/badge/View_certificate-Alura-051933?style=for-the-badge&logo=googledrive&logoColor=white" alt="View certificate">
+</a>
+</p>
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+<p align="center">
+Created by <a href="https://github.com/natsalete">Natalia Salete</a>

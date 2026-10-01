@@ -8,6 +8,6 @@ class Jogo(val titulo:String,
         return "Jogo: \n" +
                 "Título: $titulo \n" +
                 "Capa: $capa \n" +
-                "Descricao: $descricao"
+                "Descricao: $descricao\n"
     }
 }

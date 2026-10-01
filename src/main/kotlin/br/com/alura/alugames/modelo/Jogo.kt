@@ -1,4 +1,4 @@
-package com.fundamentos
+package com.fundamentos.br.com.alura.alugames.modelo
 
 class Jogo(val titulo:String,
            val capa:String) {

@@ -46,10 +46,10 @@ fun main() {
     gamerCamila.recomendar(7)
     gamerCamila.recomendar(10)
     gamerCamila.recomendar(8)
-//    println(gamerCamila)
+    println(gamerCamila)
 
     gamerCamila.alugaJogo(jogoResidentVillage, periodo1)
-//    println(gamerCamila.jogosAlugados)
+    println(gamerCamila.jogosAlugados)
 
 
     gamerCamila.recomendarJogo(jogoResidentVillage, 7)
@@ -80,9 +80,9 @@ fun main() {
 
     val gson =  GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()
     val serializacao = gson.toJson(gamerCamila.jogosRecomendados)
-    println(serializacao)
+    //println(serializacao)
 
     val arquivo = File("jogosRecomendados-${gamerCamila.nome}.json")
     arquivo.writeText(serializacao)
-    println(arquivo.absolutePath)
+    //println(arquivo.absolutePath)
 }

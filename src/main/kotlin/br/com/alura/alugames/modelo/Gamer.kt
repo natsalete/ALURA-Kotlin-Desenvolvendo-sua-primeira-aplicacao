@@ -1,5 +1,6 @@
 package com.fundamentos.br.com.alura.alugames.modelo
 
+import com.fundamentos.br.com.alura.alugames.utilitario.formatoComDuasCasasDecimais
 import java.time.LocalDate
 import java.util.Scanner
 import kotlin.random.Random
@@ -23,7 +24,7 @@ data class Gamer(var nome: String, var email: String): Recomendavel {
     val jogosRecomendados = mutableListOf<Jogo?>()
 
     override val media: Double
-        get() = listaNotas.average()
+        get() = listaNotas.average().formatoComDuasCasasDecimais()
 
     override fun recomendar(nota: Int) {
         listaNotas.add(nota)
